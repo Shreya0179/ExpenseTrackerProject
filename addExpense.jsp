@@ -93,7 +93,7 @@
 
         String url = "jdbc:mysql://localhost:3306/expense_tracker";
         String user = "root";
-        String password = "Urvi@8124";
+        String password = "root";
 
         Connection conn = null;
         PreparedStatement pstmt = null;

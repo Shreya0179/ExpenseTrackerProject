@@ -73,7 +73,7 @@
     // Declare variables only once
     String url = "jdbc:mysql://localhost:3306/expense_tracker";
     String user = "root";          
-    String password = "Urvi@8124"; 
+    String password = "root"; 
 
     Connection conn = null;
     Statement stmt = null;
@@ -106,7 +106,7 @@
     <tr>
         <td><%= rs.getInt("id") %></td>
         <td><%= rs.getString("title") %></td>
-        <td>$<%= String.format("%.2f", amount) %></td>
+        <td><%= String.format("%.2f", amount) %></td>
         <td><%= rs.getString("category") %></td>
         <td><%= rs.getDate("date") %></td>
     </tr>

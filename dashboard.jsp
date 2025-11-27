@@ -3,7 +3,7 @@
 <%
     String url = "jdbc:mysql://localhost:3306/expense_tracker";
     String user = "root";
-    String password = "Urvi@8124";
+    String password = "root";
 
     String message = "";
 
@@ -60,9 +60,16 @@
 <div class="container">
 <h2>💰 Expense Tracker Dashboard 💰</h2>
 
-<% if(!message.isEmpty()) { %>
-    <p class="message"><%= message %></p>
-<% } %>
+<%
+    String sessionMessage = (String) session.getAttribute("message");
+    if(sessionMessage != null) {
+%>
+    <p class="message"><%= sessionMessage %></p>
+<%
+        session.removeAttribute("message"); // clear it after showing
+    }
+%>
+
 
 <div class="form-container">
     <!-- POST to the same page -->
@@ -109,7 +116,7 @@
                 <input type="hidden" name="id" value="<%= rs.getInt("id") %>">
                 <button class="action-btn edit">Edit</button>
             </form>
-            <form action="deleteExpense" method="post" style="display:inline;">
+            <form action="deleteExpense.jsp" method="post" style="display:inline;">
                 <input type="hidden" name="id" value="<%= rs.getInt("id") %>">
                 <button class="action-btn delete">Delete</button>
             </form>

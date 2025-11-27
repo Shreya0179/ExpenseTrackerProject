@@ -19,7 +19,7 @@ public class AddExpenseServlet extends HttpServlet {
 
         String url = "jdbc:mysql://localhost:3306/expense_tracker";
         String user = "root";
-        String password = "Urvi@8124";
+        String password = "root";
 
         String message = "";
 
