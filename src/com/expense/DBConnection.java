@@ -5,7 +5,7 @@ public class DBConnection {
 
     private static final String URL = "jdbc:mysql://localhost:3306/expense_tracker";
     private static final String USER = "root"; 
-    private static final String PASSWORD = "root";  // my workbench password
+    private static final String PASSWORD = "Urvi@8124";  // my workbench password
 
     public static Connection getConnection() {
         Connection con = null;

@@ -6,12 +6,25 @@
 
     <servlet>
         <servlet-name>AddExpenseServlet</servlet-name>
-        <servlet-class>AddExpenseServlet</servlet-class>
+        <!-- <servlet-class>AddExpenseServlet</servlet-class> -->
+        <servlet-class>com.expense.AddExpenseServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>AddExpenseServlet</servlet-name>
         <url-pattern>/addExpense</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+    <servlet-name>ViewExpensesServlet</servlet-name>
+    <servlet-class>com.expense.ViewExpensesServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ViewExpensesServlet</servlet-name>
+    <url-pattern>/viewExpenses</url-pattern>
+</servlet-mapping>
+
 
 </web-app>

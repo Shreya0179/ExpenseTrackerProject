@@ -1,6 +1,9 @@
 import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
+// import javax.servlet.*;
+// import javax.servlet.http.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+
 import java.sql.*;
 import java.util.*;
 
@@ -35,5 +38,6 @@ public class ViewExpensesServlet extends HttpServlet {
         request.setAttribute("expensesList", expenses);
         RequestDispatcher rd = request.getRequestDispatcher("viewExpenses.jsp");
         rd.forward(request, response);
-    }
+    }
 }
+
