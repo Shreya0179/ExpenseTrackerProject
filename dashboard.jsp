@@ -108,7 +108,7 @@
     <tr>
         <td><%= rs.getInt("id") %></td>
         <td><%= rs.getString("title") %></td>
-        <td>$<%= String.format("%.2f", rs.getDouble("amount")) %></td>
+        <td><%= String.format("%.2f", rs.getDouble("amount")) %></td>
         <td><%= rs.getString("category") %></td>
         <td><%= rs.getDate("date") %></td>
         <td>
